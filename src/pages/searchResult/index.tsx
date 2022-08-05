@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Respository } from "../../components/Repository";
+import styles from "./styles.module.scss";
+import { User, Users, BookBookmark } from "phosphor-react";
 
 interface SearchResultProps {
   state: string;
@@ -14,16 +16,7 @@ interface UserData {
   public_repos: number;
   followers: number;
   following: number;
-  repos_url: {
-    repo_id: number;
-    language: string;
-    stargazers_count: number;
-    license: {
-      name: string;
-    };
-    updated_at: string;
-    description: string;
-  }
+  repos_url: string;
 }
 
 export function SearchResult() {
@@ -38,22 +31,33 @@ export function SearchResult() {
   }, []);
 
   return (
-    <section>
-      <aside>
-        <div>
+    <section className={styles.container}>
+      <aside className={styles.containerAside}>
+        <div className={styles.avatar}>
           <img src={user?.avatar_url} alt="Avatar do GitHub" />
 
-          <div>
-            <h1>{user?.name}</h1>
-            <strong>{user?.bio}</strong>
-            <span>{user?.public_repos} Repositories</span>
-            <span>{user?.followers} Followers</span>
-            <span>{user?.following} Following</span>
+          <div className={styles.userInformations}>
+
+            <h1>
+              <User size={17} />
+              {user?.name}
+            </h1>
+            <p>{user?.bio}</p>
+            <span>
+              <BookBookmark /> {user?.public_repos} Repositories
+            </span>
+            <span>
+              <Users size={16} /> {user?.followers} Followers
+              • {user?.following} Following
+            </span>
           </div>
         </div>
       </aside>
 
-      <Respository userRepository={user?.repos_url} />
+
+      <div className={styles.repositories}>
+        <Respository userState={state} />
+      </div>
     </section>
   );
 }

@@ -1,12 +1,11 @@
 .container {
-  width: 688px;
+  width: 690px;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: relative;
-  margin-top: 17rem;
-  text-align: center;
+  justify-content: center;
   gap: 1rem;
 
 
@@ -61,9 +60,11 @@
   }
 }
 
-@media(max-width: 780px) {
+@media(max-width: 1000px) {
   .container {
-    margin-top: 23rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
 
     h1 {
       display: flex;
@@ -72,7 +73,7 @@
       margin: 0 auto;
     }
 
-    div {
+    form {
       display: flex;
       flex-direction: column;
       align-items: center;

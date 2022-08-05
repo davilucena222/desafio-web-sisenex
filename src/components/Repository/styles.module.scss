@@ -1,0 +1,57 @@
+.container:hover {
+  padding: 4rem;
+
+  transition: 0.5s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 740px;
+  margin-bottom: 4rem;
+
+  border: 3px solid var(--gray-300);
+  padding: 2rem;
+  border-radius: 10px;
+
+  .description {
+    h3 {
+      font-size: 1.5rem;
+      color: var(--gray-100);
+    }
+
+    .border {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1.5px solid var(--gray-500);
+    }
+
+    p {
+      width: 500px;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: var(--gray-300);
+    }
+  }
+
+  .repositoryInformations {
+    margin-top: 0.2rem;
+
+    .language {
+      margin-top: 1rem;
+      color: var(--gray-300);
+    }
+
+    .list {
+      color: var(--gray-300);
+      display: flex;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      gap: 4rem;
+    }
+  }
+
+
+}

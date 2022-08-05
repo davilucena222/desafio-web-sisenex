@@ -1,0 +1,44 @@
+.container {
+  width: 1200px;
+  display: flex;
+  padding: 2.188rem;
+  gap: 6rem;
+
+  .containerAside {
+    display: flex;
+    width: 300px;
+    height: 700px;
+    padding: 1rem;
+    border-right: 2px solid var(--gray-500);
+
+    .avatar {
+      img {
+        border-radius: 999px;
+        width: 16rem;
+        height: 16rem;
+      }
+    }
+
+    .userInformations {
+      margin-top: 1rem;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 1rem;
+
+      h1 {
+        svg {
+          margin-right: 0.5rem;
+        }
+      }
+
+      p {
+        color: var(--gray-100);
+      }
+
+      span {
+        color: var(--gray-300);
+      }
+    }
+  }
+}
