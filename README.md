@@ -18,7 +18,7 @@
 
 # 💻 Executando a aplicação localmente
 ```bash
-$ git clone <repository link of the project>
+$ git clone https://github.com/davilucena222/desafio-web-sisenex.git
 # Instale as depenências: Execute o comando "npm i" para instalar todas as dependências
 $ Execute "npm run dev" para iniciar a aplicação no seu Browser e em seguida acesse o localhost que está no terminal
 ```
