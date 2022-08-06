@@ -33,7 +33,7 @@ export function Respository({ userState }: RepositoryProps) {
   return (
     <>
       {repository.map(repo => (
-        <a href={repo.html_url ? repo.html_url : "/"} key={repo.id} className={styles.container}>
+        <a href={repo.html_url} key={repo.id} className={styles.container}>
           <div className={styles.description}>
             <h3>
               <div>
